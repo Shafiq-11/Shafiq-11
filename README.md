@@ -7,7 +7,7 @@
   
   <br/><br/>
   
-  <a href="https://linkedin.com/in/shafiq">
+  <a href="https://www.linkedin.com/in/shafiqsha11/">
     <img src="https://img.shields.io/badge/Status-Open%20To%20Internships-818cf8?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="Open to Internships"/>
   </a>
 
@@ -152,14 +152,14 @@ An editable tracker for achievements and verification links:
   <a href="https://github.com/Shafiq-11">
     <img src="https://img.shields.io/badge/GitHub-Shafiq--11-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/>
   </a>
-  <a href="https://linkedin.com/in/shafiq">
+  <a href="https://www.linkedin.com/in/shafiqsha11/">
     <img src="https://img.shields.io/badge/LinkedIn-Shafiq-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
   </a>
-  <a href="mailto:shafiq@example.com">
-    <img src="https://img.shields.io/badge/Email-shafiq%40example.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"/>
+  <a href="mailto:shafiqahamedsha11@gmail.com">
+    <img src="https://img.shields.io/badge/Email-shafiqahamedsha11%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"/>
   </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Portfolio-Coming%20Soon-818cf8?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=0d1117" alt="Portfolio"/>
+  <a href="https://portfolio-shafiq.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-Live-818cf8?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=0d1117" alt="Portfolio"/>
   </a>
 </div>
 

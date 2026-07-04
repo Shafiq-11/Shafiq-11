@@ -1,24 +1,15 @@
 {
     "leetcode": {
-        "all": 342,
-        "easy": 150,
-        "medium": 162,
-        "hard": 30,
-        "ranking": 120450,
-        "reputation": 85,
-        "badges": [
-            {
-                "name": "50 Days Badge 2025",
-                "icon": "https://assets.leetcode.com/static_assets/marketing/2025-50-days.png"
-            },
-            {
-                "name": "Knight",
-                "icon": "https://assets.leetcode.com/static_assets/public/images/badges/knight.png"
-            }
-        ],
-        "contest_rating": 1754,
-        "contest_ranking": 12050,
-        "contest_top_percentage": 8.5
+        "all": 84,
+        "easy": 60,
+        "medium": 22,
+        "hard": 2,
+        "ranking": 1797243,
+        "reputation": 0,
+        "badges": [],
+        "contest_rating": 0,
+        "contest_ranking": 0,
+        "contest_top_percentage": 0.0
     },
     "wakatime": {
         "total_hours": "32 hrs 40 mins",
@@ -53,7 +44,7 @@
         {
             "name": "shafiq-11",
             "description": "No description provided.",
-            "language": "Markdown",
+            "language": "Python",
             "stars": 0,
             "forks": 0,
             "url": "https://github.com/Shafiq-11/shafiq-11"

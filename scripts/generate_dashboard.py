@@ -507,7 +507,7 @@ def main():
         # We render a small image embed for the badge icon
         badges_str += f'<image href="{b["icon"]}" x="{bx}" y="{by}" width="24" height="24" />\n      '
     if not badges:
-        badges_str = '<text class="subtitle" x="15" y="38">Practice Badges Loading...</text>'
+        badges_str = '<text class="subtitle" x="15" y="34" font-size="11" fill="var(--text-muted)">No badges unlocked yet</text>'
         
     lc_svg = lc_svg.replace("{{badges_icons}}", badges_str.strip())
     

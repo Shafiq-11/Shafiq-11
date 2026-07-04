@@ -93,31 +93,31 @@
   
   <!-- Solved Problems Column -->
   <g transform="translate(25, 55)">
-    <text class="num" x="0" y="30">342</text>
+    <text class="num" x="0" y="30">84</text>
     <text class="label" x="0" y="44">PROBLEMS SOLVED</text>
     
     <!-- Easy -->
     <g transform="translate(0, 58)">
       <text class="label" x="0" y="10">Easy</text>
-      <text class="val" x="180" y="10">150 / 952</text>
+      <text class="val" x="180" y="10">60 / 952</text>
       <rect class="progress-bg" x="0" y="16" width="180" height="4" />
-      <rect class="progress-easy" x="0" y="16" width="28" height="4" />
+      <rect class="progress-easy" x="0" y="16" width="11" height="4" />
     </g>
     
     <!-- Medium -->
     <g transform="translate(0, 86)">
       <text class="label" x="0" y="10">Medium</text>
-      <text class="val" x="180" y="10">162 / 2079</text>
+      <text class="val" x="180" y="10">22 / 2079</text>
       <rect class="progress-bg" x="0" y="16" width="180" height="4" />
-      <rect class="progress-medium" x="0" y="16" width="14" height="4" />
+      <rect class="progress-medium" x="0" y="16" width="1" height="4" />
     </g>
     
     <!-- Hard -->
     <g transform="translate(0, 114)">
       <text class="label" x="0" y="10">Hard</text>
-      <text class="val" x="180" y="10">30 / 950</text>
+      <text class="val" x="180" y="10">2 / 950</text>
       <rect class="progress-bg" x="0" y="16" width="180" height="4" />
-      <rect class="progress-hard" x="0" y="16" width="5" height="4" />
+      <rect class="progress-hard" x="0" y="16" width="0" height="4" />
     </g>
   </g>
   
@@ -128,10 +128,10 @@
     <!-- Contest rating / ranking box -->
     <g transform="translate(0, 0)">
       <rect class="stat-box" width="215" height="60" />
-      <text class="label" x="15" y="22">CONTEST RATING</text>
-      <text class="num" x="15" y="48" font-size="22" fill="var(--accent)">1754</text>
-      <text class="label" x="200" y="22" text-anchor="end">TOP 8.5%</text>
-      <text class="label" x="200" y="45" text-anchor="end" font-size="10">Rank: #12,050</text>
+      <text class="label" x="15" y="22">GLOBAL RANKING</text>
+      <text class="num" x="15" y="48" font-size="20" fill="var(--accent)">#1,797,243</text>
+      <text class="label" x="200" y="22" text-anchor="end">REPUTATION</text>
+      <text class="num" x="200" y="48" font-size="16" text-anchor="end" fill="var(--text-main)">0</text>
     </g>
     
     <!-- Badges box -->
@@ -139,8 +139,7 @@
       <rect class="badge-container" width="215" height="52" />
       <text class="label" x="15" y="18">BADGES</text>
       <!-- Dynamic Badge Icons -->
-      <image href="https://assets.leetcode.com/static_assets/marketing/2025-50-days.png" x="15" y="24" width="24" height="24" />
-      <image href="https://assets.leetcode.com/static_assets/public/images/badges/knight.png" x="60" y="24" width="24" height="24" />
+      <text class="subtitle" x="15" y="34" font-size="11" fill="var(--text-muted)">No badges unlocked yet</text>
     </g>
   </g>
 </svg>

@@ -118,9 +118,20 @@ def fetch_wakatime_stats(api_key):
         print("[WakaTime] No API Key provided. Using mock data.")
         return get_mock_wakatime_stats()
         
+    import base64
+    try:
+        # WakaTime expects base64 encoded 'api_key:' in the Basic Auth header
+        if not api_key.startswith("Basic ") and not api_key.endswith("="):
+            encoded_key = base64.b64encode(f"{api_key}:".encode('utf-8')).decode('utf-8')
+            auth_header = f"Basic {encoded_key}"
+        else:
+            auth_header = api_key if api_key.startswith("Basic ") else f"Basic {api_key}"
+    except Exception:
+        auth_header = f"Basic {api_key}"
+        
     url = "https://wakatime.com/api/v1/users/current/stats/last_7_days"
     headers = {
-        "Authorization": f"Basic {api_key}"
+        "Authorization": auth_header
     }
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -138,7 +149,7 @@ def fetch_wakatime_stats(api_key):
                 }
                 print(f"[WakaTime] Successfully fetched stats: {result}")
                 return result
-        print(f"[WakaTime] Failed to fetch stats, status code: {response.status_code}. Using mock data.")
+        print(f"[WakaTime] Failed to fetch stats, status code: {response.status_code}, response: {response.text}. Using mock data.")
     except Exception as e:
         print(f"[WakaTime] Error occurred: {e}. Using mock data.")
         
