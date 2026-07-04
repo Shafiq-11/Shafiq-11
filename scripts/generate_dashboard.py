@@ -18,21 +18,10 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
       <stop offset="0%" stop-color="#00ff66" />
       <stop offset="100%" stop-color="#00f0ff" />
     </linearGradient>
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#bd00ff" stop-opacity="0.8"/>
-    </linearGradient>
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0c0d14" />
       <stop offset="100%" stop-color="#05060a" />
     </linearGradient>
-    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
@@ -64,7 +53,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
       text-anchor: end;
     }
     .card-border {
-      stroke: url(#border-grad);
+      stroke: #1c1f30;
       stroke-width: 1.5;
       fill: url(#bg-grad);
       rx: 12;
@@ -79,7 +68,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
   
   <!-- Header -->
   <text class="title" x="25" y="35">⚡ PROJECT 50 CONTROL PANEL</text>
-  <text class="subtitle" x="375" y="35" text-anchor="end" filter="url(#neon)">DAY {{day}}/50</text>
+  <text class="subtitle" x="375" y="35" text-anchor="end">DAY {{day}}/50</text>
   
   <line x1="25" y1="48" x2="375" y2="48" stroke="#1c1f30" stroke-width="1"/>
 
@@ -88,7 +77,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
     <text class="label" x="0" y="15">Coding</text>
     <text class="percent" x="350" y="15">{{coding}}%</text>
     <rect class="progress-bg" x="0" y="24" width="350" height="8" />
-    <rect x="0" y="24" width="{{coding_w}}" height="8" rx="3" fill="url(#blue-grad)" filter="url(#neon)"/>
+    <rect x="0" y="24" width="{{coding_w}}" height="8" rx="3" fill="url(#blue-grad)"/>
   </g>
 
   <!-- DSA -->
@@ -96,7 +85,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
     <text class="label" x="0" y="15">DSA Practice</text>
     <text class="percent" x="350" y="15">{{dsa}}%</text>
     <rect class="progress-bg" x="0" y="24" width="350" height="8" />
-    <rect x="0" y="24" width="{{dsa_w}}" height="8" rx="3" fill="url(#purple-grad)" filter="url(#neon)"/>
+    <rect x="0" y="24" width="{{dsa_w}}" height="8" rx="3" fill="url(#purple-grad)"/>
   </g>
 
   <!-- Gym -->
@@ -104,7 +93,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
     <text class="label" x="0" y="15">Gym Consistency</text>
     <text class="percent" x="350" y="15">{{gym}}%</text>
     <rect class="progress-bg" x="0" y="24" width="350" height="8" />
-    <rect x="0" y="24" width="{{gym_w}}" height="8" rx="3" fill="url(#green-grad)" filter="url(#neon)"/>
+    <rect x="0" y="24" width="{{gym_w}}" height="8" rx="3" fill="url(#green-grad)"/>
   </g>
 
   <!-- Projects -->
@@ -112,7 +101,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
     <text class="label" x="0" y="15">Build Projects</text>
     <text class="percent" x="350" y="15">{{projects}}%</text>
     <rect class="progress-bg" x="0" y="24" width="350" height="8" />
-    <rect x="0" y="24" width="{{projects_w}}" height="8" rx="3" fill="url(#blue-grad)" filter="url(#neon)"/>
+    <rect x="0" y="24" width="{{projects_w}}" height="8" rx="3" fill="url(#blue-grad)"/>
   </g>
 
   <!-- Learning -->
@@ -120,7 +109,7 @@ PROJECT_50_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" hei
     <text class="label" x="0" y="15">Continuous Learning</text>
     <text class="percent" x="350" y="15">{{learning}}%</text>
     <rect class="progress-bg" x="0" y="24" width="350" height="8" />
-    <rect x="0" y="24" width="{{learning_w}}" height="8" rx="3" fill="url(#purple-grad)" filter="url(#neon)"/>
+    <rect x="0" y="24" width="{{learning_w}}" height="8" rx="3" fill="url(#purple-grad)"/>
   </g>
 </svg>"""
 
@@ -131,21 +120,10 @@ BIKE_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" 
       <stop offset="50%" stop-color="#00f0ff" />
       <stop offset="100%" stop-color="#00ff66" />
     </linearGradient>
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#bd00ff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.8"/>
-    </linearGradient>
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0c0d14" />
       <stop offset="100%" stop-color="#05060a" />
     </linearGradient>
-    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
@@ -170,7 +148,7 @@ BIKE_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" 
       fill: #00f0ff;
     }
     .card-border {
-      stroke: url(#border-grad);
+      stroke: #1c1f30;
       stroke-width: 1.5;
       fill: url(#bg-grad);
       rx: 12;
@@ -184,15 +162,9 @@ BIKE_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" 
       stroke: url(#path-grad);
       stroke-width: 4;
       stroke-linecap: round;
-      filter: url(#neon);
     }
     .bike-icon {
       font-size: 16px;
-      animation: bounce 2s infinite ease-in-out;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-2px); }
     }
   </style>
 
@@ -225,10 +197,6 @@ BIKE_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" 
 
 WORKOUT_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="110" viewBox="0 0 400 110">
   <defs>
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#bd00ff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ff0055" stop-opacity="0.8"/>
-    </linearGradient>
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0c0d14" />
       <stop offset="100%" stop-color="#05060a" />
@@ -237,13 +205,6 @@ WORKOUT_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="40
       <stop offset="0%" stop-color="#ff0055" />
       <stop offset="100%" stop-color="#bd00ff" />
     </linearGradient>
-    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
@@ -268,7 +229,7 @@ WORKOUT_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="40
       fill: #ff0055;
     }
     .card-border {
-      stroke: url(#border-grad);
+      stroke: #1c1f30;
       stroke-width: 1.5;
       fill: url(#bg-grad);
       rx: 12;
@@ -279,7 +240,7 @@ WORKOUT_PROGRESS_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="40
 
   <!-- Header -->
   <text class="title" x="20" y="28">💪 WORKOUT CONSISTENCY RADAR</text>
-  <text class="stat" x="380" y="28" text-anchor="end" filter="url(#neon)">{{consistency}}% CONSISTENT</text>
+  <text class="stat" x="380" y="28" text-anchor="end">{{consistency}}% CONSISTENT</text>
 
   <!-- Consistency blocks representing workouts -->
   <g transform="translate(20, 42)">
@@ -359,8 +320,7 @@ def main():
     for i in range(10):
         x = i * 36
         color = "url(#bar-grad)" if i < active_blocks else "#141724"
-        glow = 'filter="url(#neon)"' if i < active_blocks else ''
-        blocks_str += f'<rect x="{x}" y="10" width="32" height="20" rx="4" fill="{color}" {glow}/>\n    '
+        blocks_str += f'<rect x="{x}" y="10" width="32" height="20" rx="4" fill="{color}"/>\n    '
         
     workout_svg = WORKOUT_PROGRESS_TEMPLATE
     workout_svg = workout_svg.replace("{{consistency}}", str(consistency))

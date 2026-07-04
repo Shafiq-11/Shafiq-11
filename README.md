@@ -5,21 +5,10 @@
 
   <br/><br/>
   
-  <!-- Typing SVG and Profile Frame Side-by-Side -->
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-      <td width="25%" align="center" valign="middle">
-        <img src="assets/profile.png" alt="Profile Shield" width="150" style="border-radius: 50%;"/>
-      </td>
-      <td width="75%" align="left" valign="middle">
-        <h1>👋 Welcome to the Developer Command Center</h1>
-        <p>
-          <img src="svg/typing.svg" alt="Animated Typing Roles" width="450"/>
-        </p>
-      </td>
-    </tr>
-  </table>
-
+  <h1>👋 Welcome to the Developer Command Center</h1>
+  <p>
+    <img src="svg/typing.svg" alt="Animated Typing Roles" width="450"/>
+  </p>
 </div>
 
 <img src="assets/divider.svg" alt="Cyberpunk Divider" width="100%"/>
