@@ -3,7 +3,22 @@
         "all": 342,
         "easy": 150,
         "medium": 162,
-        "hard": 30
+        "hard": 30,
+        "ranking": 120450,
+        "reputation": 85,
+        "badges": [
+            {
+                "name": "50 Days Badge 2025",
+                "icon": "https://assets.leetcode.com/static_assets/marketing/2025-50-days.png"
+            },
+            {
+                "name": "Knight",
+                "icon": "https://assets.leetcode.com/static_assets/public/images/badges/knight.png"
+            }
+        ],
+        "contest_rating": 1754,
+        "contest_ranking": 12050,
+        "contest_top_percentage": 8.5
     },
     "wakatime": {
         "total_hours": "32 hrs 40 mins",
@@ -29,28 +44,43 @@
     },
     "github": {
         "followers": 2,
-        "public_repos": 9,
+        "public_repos": 4,
         "stars": 0,
-        "contributions": 1248,
-        "streak": 18
+        "contributions": 1420,
+        "streak": 24
     },
-    "project50": {
-        "coding": 92,
-        "dsa": 86,
-        "gym": 100,
-        "projects": 90,
-        "learning": 95,
-        "day": 45
-    },
-    "workout": {
-        "consistency": 96,
-        "sessions_this_month": 22,
-        "current_streak": 12
-    },
-    "bike": {
-        "progress": 78,
-        "distance_completed": 780,
-        "target_distance": 1000,
-        "status": "Cruising"
-    }
+    "repos": [
+        {
+            "name": "shafiq-11",
+            "description": "No description provided.",
+            "language": "Markdown",
+            "stars": 0,
+            "forks": 0,
+            "url": "https://github.com/Shafiq-11/shafiq-11"
+        },
+        {
+            "name": "React-learning",
+            "description": "No description provided.",
+            "language": "JavaScript",
+            "stars": 0,
+            "forks": 0,
+            "url": "https://github.com/Shafiq-11/React-learning"
+        },
+        {
+            "name": "portfolio-shafiq",
+            "description": "No description provided.",
+            "language": "HTML",
+            "stars": 0,
+            "forks": 0,
+            "url": "https://github.com/Shafiq-11/portfolio-shafiq"
+        },
+        {
+            "name": "maven-build-pipeline",
+            "description": "No description provided.",
+            "language": "Java",
+            "stars": 0,
+            "forks": 0,
+            "url": "https://github.com/Shafiq-11/maven-build-pipeline"
+        }
+    ]
 }

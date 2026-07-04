@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="120" viewBox="0 0 340 120">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --border: #30363d;
+      --text-muted: #8b949e;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --border: #d1d5db;
+        --text-muted: #4b5563;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    .card {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+      stroke-dasharray: 4 4;
+      rx: 8;
+    }
+    .text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: var(--text-muted);
+      text-anchor: middle;
+    }
+  </style>
+  <rect class="card" width="338" height="118" x="1" y="1"/>
+  <text class="text" x="170" y="65">🚀 More Projects Loading...</text>
+</svg>
