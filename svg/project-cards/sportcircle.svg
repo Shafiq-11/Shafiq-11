@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" viewBox="0 0 340 150">
+  <defs>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#bd00ff" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d14" />
+      <stop offset="100%" stop-color="#05060a" />
+    </linearGradient>
+    <filter id="neon-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ffffff;
+    }
+    .desc {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      fill: #a0a5c0;
+    }
+    .tag {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      fill: #00f0ff;
+    }
+    .card-border {
+      stroke: url(#border-grad);
+      stroke-width: 1.5;
+      fill: url(#bg-grad);
+      rx: 12;
+    }
+  </style>
+
+  <rect class="card-border" width="338" height="148" x="1" y="1" />
+
+  <!-- Accent light -->
+  <path d="M 280 1 L 327 1 A 12 12 0 0 1 339 13 L 339 40" stroke="url(#border-grad)" stroke-width="3" fill="none" filter="url(#neon-glow)" opacity="0.8"/>
+
+  <!-- Logo Icon: Basketball/Network Motif -->
+  <g transform="translate(25, 25)" filter="url(#neon-glow)">
+    <circle cx="15" cy="15" r="12" stroke="#00f0ff" stroke-width="2" fill="none" />
+    <path d="M 6 9 A 12 12 0 0 0 24 21" stroke="#bd00ff" stroke-width="1.5" fill="none" />
+    <path d="M 6 21 A 12 12 0 0 0 24 9" stroke="#bd00ff" stroke-width="1.5" fill="none" />
+  </g>
+
+  <text class="title" x="70" y="44">SportCircle</text>
+
+  <text class="desc" x="25" y="78">Sports community hub. Streamlining venue bookings</text>
+  <text class="desc" x="25" y="95">and game matching for regional players.</text>
+
+  <rect x="25" y="115" width="55" height="18" rx="4" fill="#0d1f2d" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="52.5" y="127" text-anchor="middle">Flutter</text>
+
+  <rect x="88" y="115" width="55" height="18" rx="4" fill="#1b122c" stroke="#bd00ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="115.5" y="127" fill="#bd00ff" text-anchor="middle">Node JS</text>
+
+  <rect x="151" y="115" width="60" height="18" rx="4" fill="#0d1f2d" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="181" y="127" text-anchor="middle">PostgreSQL</text>
+</svg>

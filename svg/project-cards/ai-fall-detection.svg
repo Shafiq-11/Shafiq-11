@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" viewBox="0 0 340 150">
+  <defs>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bd00ff" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d14" />
+      <stop offset="100%" stop-color="#05060a" />
+    </linearGradient>
+    <filter id="neon-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ffffff;
+    }
+    .desc {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      fill: #a0a5c0;
+    }
+    .tag {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      fill: #bd00ff;
+    }
+    .card-border {
+      stroke: url(#border-grad);
+      stroke-width: 1.5;
+      fill: url(#bg-grad);
+      rx: 12;
+    }
+  </style>
+
+  <rect class="card-border" width="338" height="148" x="1" y="1" />
+
+  <!-- Accent light -->
+  <path d="M 280 1 L 327 1 A 12 12 0 0 1 339 13 L 339 40" stroke="url(#border-grad)" stroke-width="3" fill="none" filter="url(#neon-glow)" opacity="0.8"/>
+
+  <!-- Logo Icon: Scanning Radar / Eye motif -->
+  <g transform="translate(25, 25)" filter="url(#neon-glow)">
+    <path d="M 3 15 Q 15 3 27 15 Q 15 27 3 15 Z" stroke="#bd00ff" stroke-width="2" fill="none" />
+    <circle cx="15" cy="15" r="4" fill="#00f0ff" />
+    <path d="M 9 9 L 6 6" stroke="#bd00ff" stroke-width="1.5" />
+    <path d="M 21 9 L 24 6" stroke="#bd00ff" stroke-width="1.5" />
+  </g>
+
+  <text class="title" x="70" y="44">AI Fall Detection</text>
+
+  <text class="desc" x="25" y="78">Computer vision pipeline. Processing live video feeds</text>
+  <text class="desc" x="25" y="95">to detect safety anomalies and issue SOS triggers.</text>
+
+  <rect x="25" y="115" width="50" height="18" rx="4" fill="#1b122c" stroke="#bd00ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="50" y="127" text-anchor="middle">Python</text>
+
+  <rect x="83" y="115" width="55" height="18" rx="4" fill="#0d1f2d" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="110.5" y="127" fill="#00f0ff" text-anchor="middle">OpenCV</text>
+
+  <rect x="146" y="115" width="50" height="18" rx="4" fill="#1b122c" stroke="#bd00ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="171.5" y="127" text-anchor="middle">PyTorch</text>
+</svg>

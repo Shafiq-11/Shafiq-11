@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="150" viewBox="0 0 340 150">
+  <defs>
+    <!-- Glowing neon gradients -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#bd00ff" />
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d14" />
+      <stop offset="100%" stop-color="#05060a" />
+    </linearGradient>
+    
+    <!-- Neon Glow Filter -->
+    <filter id="neon-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ffffff;
+    }
+    .desc {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      fill: #a0a5c0;
+    }
+    .tag {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      fill: #00f0ff;
+    }
+    .card-border {
+      stroke: url(#border-grad);
+      stroke-width: 1.5;
+      fill: url(#bg-grad);
+      rx: 12;
+    }
+  </style>
+
+  <!-- Main Card Background and Border -->
+  <rect class="card-border" width="338" height="148" x="1" y="1" />
+
+  <!-- Neon Accent Light on top-right -->
+  <path d="M 280 1 L 327 1 A 12 12 0 0 1 339 13 L 339 40" stroke="url(#border-grad)" stroke-width="3" fill="none" filter="url(#neon-glow)" opacity="0.8"/>
+
+  <!-- Logo Icon: Motorcycle/Wheel motif -->
+  <g transform="translate(25, 25)" filter="url(#neon-glow)">
+    <circle cx="15" cy="15" r="12" stroke="#00f0ff" stroke-width="2" fill="none" />
+    <circle cx="15" cy="15" r="5" fill="#bd00ff" />
+    <!-- Spokes -->
+    <line x1="15" y1="3" x2="15" y2="27" stroke="#00f0ff" stroke-width="1.5" />
+    <line x1="3" y1="15" x2="27" y2="15" stroke="#00f0ff" stroke-width="1.5" />
+  </g>
+
+  <!-- Title -->
+  <text class="title" x="70" y="44">Reborn Motors</text>
+
+  <!-- Description (wrapped manually for SVG) -->
+  <text class="desc" x="25" y="78">Premium motorcycle custom garage. Building</text>
+  <text class="desc" x="25" y="95">sleek modern builds with Java &amp; Spring API.</text>
+
+  <!-- Tags / Technologies -->
+  <rect x="25" y="115" width="75" height="18" rx="4" fill="#0d1f2d" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="62.5" y="127" text-anchor="middle">Spring Boot</text>
+
+  <rect x="108" y="115" width="55" height="18" rx="4" fill="#1b122c" stroke="#bd00ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="135.5" y="127" fill="#bd00ff" text-anchor="middle">React JS</text>
+
+  <rect x="171" y="115" width="45" height="18" rx="4" fill="#0c1724" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
+  <text class="tag" x="193.5" y="127" text-anchor="middle">MySQL</text>
+</svg>

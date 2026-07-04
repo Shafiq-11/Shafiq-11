@@ -1,0 +1,56 @@
+{
+    "leetcode": {
+        "all": 342,
+        "easy": 150,
+        "medium": 162,
+        "hard": 30
+    },
+    "wakatime": {
+        "total_hours": "32 hrs 40 mins",
+        "daily_average": "4 hrs 40 mins",
+        "languages": [
+            {
+                "name": "Java",
+                "percent": 42.5
+            },
+            {
+                "name": "TypeScript",
+                "percent": 28.2
+            },
+            {
+                "name": "JavaScript",
+                "percent": 15.3
+            },
+            {
+                "name": "Python",
+                "percent": 10.0
+            }
+        ]
+    },
+    "github": {
+        "followers": 2,
+        "public_repos": 9,
+        "stars": 0,
+        "contributions": 1248,
+        "streak": 18
+    },
+    "project50": {
+        "coding": 92,
+        "dsa": 86,
+        "gym": 100,
+        "projects": 90,
+        "learning": 95,
+        "day": 45
+    },
+    "workout": {
+        "consistency": 96,
+        "sessions_this_month": 22,
+        "current_streak": 12
+    },
+    "bike": {
+        "progress": 78,
+        "distance_completed": 780,
+        "target_distance": 1000,
+        "status": "Cruising"
+    }
+}
