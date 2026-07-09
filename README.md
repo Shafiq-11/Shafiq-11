@@ -140,17 +140,17 @@ Only repositories from my GitHub, auto-generated with hover-glow cards:
       <!-- LeetCode Solved & Contest metrics dashboard -->
       <img src="svg/leetcode-dashboard.svg" alt="LeetCode Dashboard" width="100%"/>
     </td>
-    <td width="50%" valign="top" align="center">
-      <h3>📈 GitHub Performance Stats</h3>
-      <img src="https://github-readme-stats.vercel.app/api?username=Shafiq-11&show_icons=true&theme=transparent&title_color=818cf8&text_color=8b949e&icon_color=818cf8&border_color=30363d" alt="GitHub Stats" width="100%"/>
+    <td width="50%" align="center">
+      <img src="https://github-stats-extended.vercel.app/api?username=Shafiq-11&show_icons=true&theme=transparent&title_color=818cf8&text_color=8b949e&icon_color=818cf8&border_color=30363d" alt="GitHub Stats" width="95%"/>
       <br/><br/>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shafiq-11&theme=transparent&title_color=818cf8&text_color=8b949e&icon_color=818cf8&border_color=30363d&fire=818cf8" alt="GitHub Streak" width="100%"/>
+      <img src="https://streak-stats.demolab.com/?user=Shafiq-11&theme=transparent&title_color=818cf8&text_color=8b949e&icon_color=818cf8&border_color=30363d&fire=818cf8" alt="GitHub Streak" width="95%"/>
     </td>
   </tr>
 </table>
 
 <br/>
 
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Shafiq-11&layout=compact&theme=transparent&title_color=818cf8&text_color=8b949e&border_color=30363d" alt="Top Languages" width="100%"/>
 <div align="center">
   <h3>👾 GitHub Contribution Snake Game</h3>
   <!-- Platane Snake game contribution grid (generated daily) -->
