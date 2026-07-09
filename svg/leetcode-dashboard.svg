@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="190" viewBox="0 0 500 190">
   <style>
     :root {
-      --bg: #0d1117;
+      --bg: #0b0f19;
       --border: #30363d;
       --text-main: #f0f6fc;
       --text-muted: #8b949e;
@@ -129,7 +129,7 @@
     <g transform="translate(0, 0)">
       <rect class="stat-box" width="215" height="60" />
       <text class="label" x="15" y="22">GLOBAL RANKING</text>
-      <text class="num" x="15" y="48" font-size="20" fill="var(--accent)">#1,797,243</text>
+      <text class="num" x="15" y="48" font-size="20" fill="var(--accent)">#1,802,830</text>
       <text class="label" x="200" y="22" text-anchor="end">REPUTATION</text>
       <text class="num" x="200" y="48" font-size="16" text-anchor="end" fill="var(--text-main)">0</text>
     </g>

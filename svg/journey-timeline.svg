@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --border: #30363d;
+      --accent: #818cf8;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --line-bg: #1c2230;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --border: #d1d5db;
+        --accent: #4f46e5;
+        --text-main: #1f2937;
+        --text-muted: #4b5563;
+        --line-bg: #e5e7eb;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    .card {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+      rx: 8;
+    }
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      fill: var(--text-main);
+      letter-spacing: 0.5px;
+    }
+    text {
+      font-family: 'Outfit', sans-serif;
+    }
+    .year {
+      font-weight: 700;
+      font-size: 14px;
+      fill: var(--text-main);
+    }
+    .desc {
+      font-size: 11px;
+      fill: var(--text-muted);
+    }
+    .timeline-line {
+      stroke: var(--line-bg);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+    .timeline-active-line {
+      stroke: var(--accent);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+    .dot {
+      fill: var(--line-bg);
+      stroke: var(--border);
+      stroke-width: 2;
+    }
+    .active-dot {
+      fill: var(--accent);
+      stroke: var(--accent);
+      opacity: 0;
+      transform: scale(0.5);
+      transform-origin: center;
+    }
+    .line-1 { animation: grow-line 1s 0s ease-in-out forwards; }
+    .dot-1 { animation: glow-dot 0.5s 0s ease-out forwards; }
+    .line-2 { animation: grow-line 1s 1s ease-in-out forwards; }
+    .dot-2 { animation: glow-dot 0.5s 1s ease-out forwards; }
+    .line-3 { animation: grow-line 1s 2s ease-in-out forwards; }
+    .dot-3 { animation: glow-dot 0.5s 2s ease-out forwards; }
+    
+    @keyframes grow-line {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes glow-dot {
+      to { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 4px var(--accent)); }
+    }
+  </style>
+  <rect class="card" width="498" height="278" x="1" y="1" />
+  <text class="title" x="25" y="32">🚀 CODING JOURNEY</text>
+  
+  <line class="timeline-line" x1="60" y1="70" x2="60" y2="230" />
+  <line class="timeline-active-line line-1" x1="60" y1="70" x2="60" y2="150" />
+  <line class="timeline-active-line line-2" x1="60" y1="150" x2="60" y2="230" />
+  
+  <g transform="translate(60, 70)">
+    <circle class="dot" cx="0" cy="0" r="6" />
+    <circle class="active-dot dot-1" cx="0" cy="0" r="6" />
+    <text class="year" x="20" y="5">2024</text>
+    <line x1="65" y1="0" x2="400" y2="0" stroke="var(--line-bg)" stroke-dasharray="4 4" opacity="0.5"/>
+    <text class="desc" x="20" y="24">Mastered Java basics &amp; Object Oriented Programming concepts</text>
+  </g>
+  
+  <g transform="translate(60, 150)">
+    <circle class="dot" cx="0" cy="0" r="6" />
+    <circle class="active-dot dot-2" cx="0" cy="0" r="6" />
+    <text class="year" x="20" y="5">2025</text>
+    <line x1="65" y1="0" x2="400" y2="0" stroke="var(--line-bg)" stroke-dasharray="4 4" opacity="0.5"/>
+    <text class="desc" x="20" y="24">Built responsive React applications &amp; State management models</text>
+  </g>
+  
+  <g transform="translate(60, 230)">
+    <circle class="dot" cx="0" cy="0" r="6" />
+    <circle class="active-dot dot-3" cx="0" cy="0" r="6" />
+    <text class="year" x="20" y="5">2026</text>
+    <line x1="65" y1="0" x2="400" y2="0" stroke="var(--line-bg)" stroke-dasharray="4 4" opacity="0.5"/>
+    <text class="desc" x="20" y="24">Learning Spring Boot, microservices, and cloud deployments</text>
+  </g>
+</svg>

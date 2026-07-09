@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+  <defs>
+    <pattern id="block-pat" width="10" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="12" fill="var(--accent)" />
+    </pattern>
+    <pattern id="track-pat" width="10" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="12" fill="var(--bar-bg)" />
+    </pattern>
+  </defs>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --border: #30363d;
+      --accent: #818cf8;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --bar-bg: #1c2230;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --border: #d1d5db;
+        --accent: #4f46e5;
+        --text-main: #1f2937;
+        --text-muted: #4b5563;
+        --bar-bg: #e5e7eb;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+    .card {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+      rx: 8;
+    }
+    text {
+      font-family: 'Fira Code', monospace;
+      fill: var(--text-main);
+      font-size: 13px;
+    }
+    .title {
+      fill: var(--accent);
+      font-weight: bold;
+    }
+    .bar-track {
+      fill: url(#track-pat);
+    }
+    .bar-fill {
+      fill: url(#block-pat);
+    }
+    
+    .fill-java { animation: f-java 1.5s ease-out forwards; }
+    .fill-react { animation: f-react 1.5s ease-out forwards; }
+    .fill-spring { animation: f-spring 1.5s ease-out forwards; }
+    .fill-docker { animation: f-docker 1.5s ease-out forwards; }
+    .fill-dsa { animation: f-dsa 1.5s ease-out forwards; }
+    .fill-sys { animation: f-sys 1.5s ease-out forwards; }
+    
+    @keyframes f-java { from { width: 0; } to { width: 180px; } }
+    @keyframes f-react { from { width: 0; } to { width: 170px; } }
+    @keyframes f-spring { from { width: 0; } to { width: 160px; } }
+    @keyframes f-docker { from { width: 0; } to { width: 120px; } }
+    @keyframes f-dsa { from { width: 0; } to { width: 170px; } }
+    @keyframes f-sys { from { width: 0; } to { width: 140px; } }
+  </style>
+  
+  <rect class="card" width="498" height="278" x="1" y="1" />
+  
+  <g transform="translate(30, 40)">
+    <text x="0" y="0" class="title">┌─────────────────────────────┐</text>
+    <text x="0" y="18" class="title">│ STATUS                      │</text>
+    <text x="0" y="36" class="title">├─────────────────────────────┤</text>
+    
+    <!-- Java -->
+    <g transform="translate(0, 54)">
+      <text x="0" y="12">│ Java           </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-java" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- React -->
+    <g transform="translate(0, 78)">
+      <text x="0" y="12">│ React          </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-react" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- Spring Boot -->
+    <g transform="translate(0, 102)">
+      <text x="0" y="12">│ Spring Boot    </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-spring" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- Docker -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="12">│ Docker         </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-docker" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- DSA -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="12">│ DSA Practice   </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-dsa" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- System Design -->
+    <g transform="translate(0, 174)">
+      <text x="0" y="12">│ System Design  </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-sys" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <text x="0" y="206" class="title">└─────────────────────────────┘</text>
+  </g>
+</svg>

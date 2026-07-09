@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <style>
+    :root {
+      --accent: #818cf8;
+      --icon-color: #8b949e;
+      --icon-border: #30363d;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --accent: #4f46e5;
+        --icon-color: #4b5563;
+        --icon-border: #d1d5db;
+      }
+    }
+    .icon-box {
+      fill: none;
+      stroke: var(--icon-border);
+      stroke-width: 1.5;
+      rx: 20;
+    }
+    .icon-label {
+      font-family: sans-serif;
+      font-size: 10px;
+      fill: var(--icon-color);
+      text-anchor: middle;
+      font-weight: 600;
+    }
+    .float-item {
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    
+    .float-1 { animation: float-key-1 6s infinite ease-in-out; }
+    .float-2 { animation: float-key-2 7s infinite ease-in-out; }
+    .float-3 { animation: float-key-3 8s infinite ease-in-out; }
+    .float-4 { animation: float-key-4 6.5s infinite ease-in-out; }
+    .float-5 { animation: float-key-5 7.5s infinite ease-in-out; }
+    
+    @keyframes float-key-1 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+    @keyframes float-key-2 {
+      0%, 100% { transform: translateY(-10px) rotate(-3deg); }
+      50% { transform: translateY(5px) rotate(3deg); }
+    }
+    @keyframes float-key-3 {
+      0%, 100% { transform: translateY(5px) rotate(2deg); }
+      50% { transform: translateY(-12px) rotate(-4deg); }
+    }
+    @keyframes float-key-4 {
+      0%, 100% { transform: translateY(-5px) rotate(-5deg); }
+      50% { transform: translateY(10px) rotate(5deg); }
+    }
+    @keyframes float-key-5 {
+      0%, 100% { transform: translateY(8px) rotate(4deg); }
+      50% { transform: translateY(-8px) rotate(-2deg); }
+    }
+  </style>
+  
+  <!-- Java -->
+  <g class="float-item float-1" transform="translate(60, 45)">
+    <rect class="icon-box" width="90" height="40" />
+    <!-- Coffee Cup Vector -->
+    <path d="M 20 22 C 20 28 32 28 32 22 L 32 15 L 20 15 Z" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <path d="M 32 17 C 35 17 35 21 32 21" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <path d="M 18 28 L 34 28" stroke="var(--accent)" stroke-width="1.5" />
+    <text class="icon-label" x="60" y="24">Java</text>
+  </g>
+  
+  <!-- React -->
+  <g class="float-item float-2" transform="translate(210, 45)">
+    <rect class="icon-box" width="90" height="40" />
+    <!-- React Atom Logo -->
+    <ellipse cx="25" cy="20" rx="10" ry="3.5" fill="none" stroke="var(--accent)" stroke-width="1" transform="rotate(30, 25, 20)" />
+    <ellipse cx="25" cy="20" rx="10" ry="3.5" fill="none" stroke="var(--accent)" stroke-width="1" transform="rotate(-30, 25, 20)" />
+    <ellipse cx="25" cy="20" rx="10" ry="3.5" fill="none" stroke="var(--accent)" stroke-width="1" transform="rotate(90, 25, 20)" />
+    <circle cx="25" cy="20" r="1.5" fill="var(--accent)" />
+    <text class="icon-label" x="60" y="24">React</text>
+  </g>
+  
+  <!-- Spring -->
+  <g class="float-item float-3" transform="translate(360, 45)">
+    <rect class="icon-box" width="90" height="40" />
+    <!-- Leaf logo -->
+    <path d="M 20 26 C 20 16 28 14 30 14 C 30 14 30 22 22 26 Z" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <line x1="20" y1="26" x2="27" y2="17" stroke="var(--accent)" stroke-width="1.5" />
+    <text class="icon-label" x="60" y="24">Spring</text>
+  </g>
+  
+  <!-- Docker -->
+  <g class="float-item float-4" transform="translate(510, 45)">
+    <rect class="icon-box" width="90" height="40" />
+    <!-- Cargo boxes -->
+    <rect x="18" y="21" width="6" height="6" fill="none" stroke="var(--accent)" stroke-width="1" />
+    <rect x="25" y="21" width="6" height="6" fill="none" stroke="var(--accent)" stroke-width="1" />
+    <rect x="21" y="14" width="6" height="6" fill="none" stroke="var(--accent)" stroke-width="1" />
+    <path d="M 15 28 C 17 28 19 29 20 30 C 22 30 28 29 32 28" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <text class="icon-label" x="60" y="24">Docker</text>
+  </g>
+  
+  <!-- Git -->
+  <g class="float-item float-5" transform="translate(660, 45)">
+    <rect class="icon-box" width="90" height="40" />
+    <!-- Connected nodes -->
+    <circle cx="20" cy="27" r="2.5" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <circle cx="20" cy="13" r="2.5" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <circle cx="30" cy="18" r="2.5" fill="none" stroke="var(--accent)" stroke-width="1.5" />
+    <line x1="20" y1="24.5" x2="20" y2="15.5" stroke="var(--accent)" stroke-width="1.5" />
+    <path d="M 20 20 L 27.5 18" stroke="var(--accent)" stroke-width="1.5" />
+    <text class="icon-label" x="60" y="24">Git</text>
+  </g>
+</svg>

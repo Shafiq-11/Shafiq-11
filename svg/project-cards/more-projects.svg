@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="340" height="120" viewBox="0 0 340 120">
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="130" viewBox="0 0 340 130">
   <style>
     :root {
-      --bg: #0d1117;
+      --bg: #0b0f19;
       --border: #30363d;
       --text-muted: #8b949e;
     }
@@ -12,22 +12,22 @@
         --text-muted: #4b5563;
       }
     }
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
     .card {
       fill: var(--bg);
       stroke: var(--border);
       stroke-width: 1.5;
       stroke-dasharray: 4 4;
-      rx: 8;
+      rx: 6;
     }
     .text {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Fira Code', monospace;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 12px;
       fill: var(--text-muted);
       text-anchor: middle;
     }
   </style>
-  <rect class="card" width="338" height="118" x="1" y="1"/>
-  <text class="text" x="170" y="65">🚀 More Projects Loading...</text>
+  <rect class="card" width="338" height="128" x="1" y="1"/>
+  <text class="text" x="170" y="70">🚀 [ More Projects Loading... ]</text>
 </svg>

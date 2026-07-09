@@ -5,99 +5,10 @@ import shutil
 
 # ==================== SVG TEMPLATES ====================
 
-TYPING_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="500" height="80" viewBox="0 0 500 80">
-  <style>
-    :root {
-      --bg: #0d1117;
-      --border: #30363d;
-      --accent: #818cf8;
-      --text-primary: #f0f6fc;
-      --text-secondary: #8b949e;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #f6f8fa;
-        --border: #d1d5db;
-        --accent: #4f46e5;
-        --text-primary: #1f2937;
-        --text-secondary: #4b5563;
-      }
-    }
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
-    .panel {
-      fill: var(--bg);
-      stroke: var(--border);
-      stroke-width: 1.5;
-      rx: 8;
-    }
-    .dot-red { fill: #ff5f56; }
-    .dot-yellow { fill: #ffbd2e; }
-    .dot-green { fill: #27c93f; }
-    
-    text {
-      font-family: 'Fira Code', monospace;
-      font-size: 14px;
-      fill: var(--text-primary);
-    }
-    .terminal-title {
-      font-size: 11px;
-      fill: var(--text-secondary);
-      text-anchor: middle;
-    }
-    .prompt {
-      fill: var(--accent);
-      font-weight: bold;
-    }
-    .cursor {
-      fill: var(--accent);
-      animation: blink 0.8s infinite steps(2);
-    }
-    .text-line {
-      opacity: 0;
-      animation: type-sequence 18s infinite steps(1);
-    }
-    .line-1 { animation-delay: 0s; }
-    .line-2 { animation-delay: 3s; }
-    .line-3 { animation-delay: 6s; }
-    .line-4 { animation-delay: 9s; }
-    .line-5 { animation-delay: 12s; }
-    .line-6 { animation-delay: 15s; }
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-    @keyframes type-sequence {
-      0%, 16.66% { opacity: 1; }
-      16.67%, 100% { opacity: 0; }
-    }
-  </style>
-  <rect class="panel" width="498" height="78" x="1" y="1" />
-  <circle cx="20" cy="20" r="4" class="dot-red" />
-  <circle cx="32" cy="20" r="4" class="dot-yellow" />
-  <circle cx="44" cy="20" r="4" class="dot-green" />
-  <text class="terminal-title" x="250" y="24">shafiq@command-center:~</text>
-  <text class="prompt" x="20" y="55">&gt;</text>
-  <g transform="translate(38, 55)">
-    <text class="text-line line-1" x="0" y="0">Full Stack Developer</text>
-    <text class="text-line line-2" x="0" y="0">Java | Spring Boot | React</text>
-    <text class="text-line line-3" x="0" y="0">Building scalable web applications</text>
-    <text class="text-line line-4" x="0" y="0">Solving algorithmic problems</text>
-    <text class="text-line line-5" x="0" y="0">DSA &amp; LeetCode enthusiast</text>
-    <text class="text-line line-6" x="0" y="0">Open to Internship Opportunities 🚀</text>
-    <rect class="cursor" x="290" y="-12" width="8" height="14">
-      <animate attributeName="x" 
-               values="168;219;286;236;210;303" 
-               dur="18s" 
-               repeatCount="indefinite" 
-               calcMode="discrete"/>
-    </rect>
-  </g>
-</svg>"""
-
 LEETCODE_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="500" height="190" viewBox="0 0 500 190">
   <style>
     :root {
-      --bg: #0d1117;
+      --bg: #0b0f19;
       --border: #30363d;
       --text-main: #f0f6fc;
       --text-muted: #8b949e;
@@ -236,98 +147,206 @@ LEETCODE_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="500" heigh
   </g>
 </svg>"""
 
-PROJECT_CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="120" viewBox="0 0 340 120">
+COMMAND_CENTER_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="500" height="280" viewBox="0 0 500 280">
+  <defs>
+    <pattern id="block-pat" width="10" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="12" fill="var(--accent)" />
+    </pattern>
+    <pattern id="track-pat" width="10" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="12" fill="var(--bar-bg)" />
+    </pattern>
+  </defs>
   <style>
     :root {
-      --bg: #0d1117;
+      --bg: #0b0f19;
       --border: #30363d;
+      --accent: #818cf8;
       --text-main: #f0f6fc;
       --text-muted: #8b949e;
-      --accent: #818cf8;
-      --lang-dot: #8b949e;
+      --bar-bg: #1c2230;
     }
     @media (prefers-color-scheme: light) {
       :root {
         --bg: #ffffff;
         --border: #d1d5db;
+        --accent: #4f46e5;
         --text-main: #1f2937;
         --text-muted: #4b5563;
-        --accent: #4f46e5;
+        --bar-bg: #e5e7eb;
       }
     }
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
     .card {
       fill: var(--bg);
       stroke: var(--border);
       stroke-width: 1.5;
       rx: 8;
     }
+    text {
+      font-family: 'Fira Code', monospace;
+      fill: var(--text-main);
+      font-size: 13px;
+    }
     .title {
-      font-family: 'Outfit', sans-serif;
+      fill: var(--accent);
+      font-weight: bold;
+    }
+    .bar-track {
+      fill: url(#track-pat);
+    }
+    .bar-fill {
+      fill: url(#block-pat);
+    }
+    
+    .fill-java { animation: f-java 1.5s ease-out forwards; }
+    .fill-react { animation: f-react 1.5s ease-out forwards; }
+    .fill-spring { animation: f-spring 1.5s ease-out forwards; }
+    .fill-docker { animation: f-docker 1.5s ease-out forwards; }
+    .fill-dsa { animation: f-dsa 1.5s ease-out forwards; }
+    .fill-sys { animation: f-sys 1.5s ease-out forwards; }
+    
+    @keyframes f-java { from { width: 0; } to { width: 180px; } }
+    @keyframes f-react { from { width: 0; } to { width: 170px; } }
+    @keyframes f-spring { from { width: 0; } to { width: 160px; } }
+    @keyframes f-docker { from { width: 0; } to { width: 120px; } }
+    @keyframes f-dsa { from { width: 0; } to { width: 170px; } }
+    @keyframes f-sys { from { width: 0; } to { width: 140px; } }
+  </style>
+  
+  <rect class="card" width="498" height="278" x="1" y="1" />
+  
+  <g transform="translate(30, 40)">
+    <text x="0" y="0" class="title">┌─────────────────────────────┐</text>
+    <text x="0" y="18" class="title">│ STATUS                      │</text>
+    <text x="0" y="36" class="title">├─────────────────────────────┤</text>
+    
+    <!-- Java -->
+    <g transform="translate(0, 54)">
+      <text x="0" y="12">│ Java           </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-java" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- React -->
+    <g transform="translate(0, 78)">
+      <text x="0" y="12">│ React          </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-react" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- Spring Boot -->
+    <g transform="translate(0, 102)">
+      <text x="0" y="12">│ Spring Boot    </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-spring" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- Docker -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="12">│ Docker         </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-docker" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- DSA -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="12">│ DSA Practice   </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-dsa" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <!-- System Design -->
+    <g transform="translate(0, 174)">
+      <text x="0" y="12">│ System Design  </text>
+      <rect class="bar-track" x="130" y="1" width="200" height="12" />
+      <rect class="bar-fill fill-sys" x="130" y="1" width="0" height="12" />
+      <text x="340" y="12">│</text>
+    </g>
+    
+    <text x="0" y="206" class="title">└─────────────────────────────┘</text>
+  </g>
+</svg>"""
+
+PROJECT_CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="130" viewBox="0 0 340 130">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --border: #30363d;
+      --accent: #818cf8;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --border: #d1d5db;
+        --accent: #4f46e5;
+        --text-main: #1f2937;
+        --text-muted: #4b5563;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+    .card {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+      rx: 6;
+      transition: all 0.3s ease;
+    }
+    svg:hover .card {
+      stroke: var(--accent);
+      filter: drop-shadow(0 0 6px var(--accent));
+    }
+    text {
+      font-family: 'Fira Code', monospace;
+      fill: var(--text-main);
+    }
+    .title {
       font-weight: 700;
       font-size: 14px;
       fill: var(--accent);
     }
-    .desc {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 400;
+    .accent-text {
+      fill: var(--accent);
+    }
+    .white {
+      fill: var(--text-main);
+    }
+    .dim-text {
+      fill: var(--text-muted);
       font-size: 11px;
-      fill: var(--text-muted);
     }
-    .meta {
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      font-size: 10px;
-      fill: var(--text-muted);
+    .bar {
+      fill: var(--accent);
+      opacity: 0.15;
+      transition: all 0.3s ease;
     }
-    .lang-circle {
-      fill: var(--lang-dot);
+    svg:hover .bar {
+      opacity: 0.4;
     }
   </style>
-  <rect class="card" width="338" height="118" x="1" y="1"/>
+  <rect class="card" width="338" height="128" x="1" y="1" />
   
-  <!-- Repo icon (simplified book/repo logo) -->
-  <path d="M 22 22 L 22 34 A 2 2 0 0 0 24 36 L 34 36 L 34 24 L 24 24 A 2 2 0 0 0 22 22 Z" fill="none" stroke="var(--accent)" stroke-width="1.5" />
-  <path d="M 24 24 L 34 24" stroke="var(--accent)" stroke-width="1.5" />
-  <circle cx="27" cy="29" r="0.8" fill="var(--accent)" />
+  <text class="title" x="20" y="28">┌─ {{name}} ──────────┐</text>
   
-  <!-- Title -->
-  <text class="title" x="46" y="32">{{name}}</text>
+  <rect class="bar" x="20" y="38" width="300" height="4" rx="2" />
   
-  <!-- Description (split/wrapped) -->
-  <text class="desc" x="22" y="58">{{desc1}}</text>
-  <text class="desc" x="22" y="73">{{desc2}}</text>
+  <text class="dim-text" x="20" y="60">│ Status : <tspan class="accent-text" font-weight="bold">ACTIVE</tspan></text>
+  <text class="dim-text" x="20" y="80">│ Tech   : <tspan class="white">{{tech_stack}}</tspan></text>
+  <text class="dim-text" x="20" y="100">│ Link   : <tspan class="accent-text">View Repository →</tspan></text>
   
-  <!-- Footer Meta -->
-  <g transform="translate(22, 98)">
-    <!-- Language Dot -->
-    <circle class="lang-circle" cx="5" cy="-3" r="4" fill="{{lang_color}}" />
-    <text class="meta" x="15" y="0">{{language}}</text>
-    
-    <!-- Stars -->
-    <g transform="translate({{stars_x}}, 0)">
-      <!-- Star Icon -->
-      <path d="M 0,-7 L 1.8,-3 L 5.5,-3 L 2.5,0 L 3.5,4 L 0,2 L -3.5,4 L -2.5,0 L -5.5,-3 L -1.8,-3 Z" fill="var(--text-muted)" />
-      <text class="meta" x="9" y="0">{{stars}}</text>
-    </g>
-    
-    <!-- Forks -->
-    <g transform="translate({{forks_x}}, 0)">
-      <!-- Fork Icon -->
-      <circle cx="-3" cy="-7" r="1.2" fill="none" stroke="var(--text-muted)" stroke-width="1" />
-      <circle cx="3" cy="-7" r="1.2" fill="none" stroke="var(--text-muted)" stroke-width="1" />
-      <circle cx="0" cy="1" r="1.2" fill="none" stroke="var(--text-muted)" stroke-width="1" />
-      <path d="M -3,-5 L -3,-3 A 1.5 1.5 0 0 0 -1.5,-1.5 L 1.5,-1.5 A 1.5 1.5 0 0 0 3,-3 L 3,-5" fill="none" stroke="var(--text-muted)" stroke-width="1" />
-      <path d="M 0,-1.5 L 0,0" stroke="var(--text-muted)" stroke-width="1" />
-      <text class="meta" x="9" y="0">{{forks}}</text>
-    </g>
-  </g>
+  <text class="title" x="20" y="118">└──────────────────────────┘</text>
 </svg>"""
 
-LOADING_CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="120" viewBox="0 0 340 120">
+LOADING_CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="340" height="130" viewBox="0 0 340 130">
   <style>
     :root {
-      --bg: #0d1117;
+      --bg: #0b0f19;
       --border: #30363d;
       --text-muted: #8b949e;
     }
@@ -338,24 +357,24 @@ LOADING_CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="340" h
         --text-muted: #4b5563;
       }
     }
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
     .card {
       fill: var(--bg);
       stroke: var(--border);
       stroke-width: 1.5;
       stroke-dasharray: 4 4;
-      rx: 8;
+      rx: 6;
     }
     .text {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Fira Code', monospace;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 12px;
       fill: var(--text-muted);
       text-anchor: middle;
     }
   </style>
-  <rect class="card" width="338" height="118" x="1" y="1"/>
-  <text class="text" x="170" y="65">🚀 More Projects Loading...</text>
+  <rect class="card" width="338" height="128" x="1" y="1"/>
+  <text class="text" x="170" y="70">🚀 [ More Projects Loading... ]</text>
 </svg>"""
 
 # ==================== LANGUAGE COLORS ====================
@@ -384,34 +403,26 @@ def get_lang_color(lang):
         return "#8b949e"
     return LANG_COLORS.get(lang.lower(), "#8b949e")
 
-# ==================== DESCRIPTION WRAPPER ====================
+# ==================== TECH MAPPING ====================
 
-def split_description(text, max_len=40):
-    if not text:
-        return "", ""
-    words = text.split()
-    line1 = ""
-    line2 = ""
-    
-    i = 0
-    # Build first line
-    while i < len(words) and len(line1) + len(words[i]) + 1 <= max_len:
-        line1 += (" " if line1 else "") + words[i]
-        i += 1
-        
-    # Build second line
-    while i < len(words) and len(line2) + len(words[i]) + 1 <= max_len:
-        line2 += (" " if line2 else "") + words[i]
-        i += 1
-        
-    # Ellipsis if truncated
-    if i < len(words):
-        if len(line2) + 3 <= max_len:
-            line2 += "..."
-        else:
-            line2 = line2[:max_len-3] + "..."
-            
-    return line1, line2
+def get_tech_stack_string(name, lang):
+    """
+    Returns a customized tech stack string based on repo name or language
+    """
+    n = name.lower()
+    if "react" in n:
+        return "React.js + JavaScript"
+    elif "portfolio" in n:
+        return "HTML5 + CSS3 + VanillaJS"
+    elif "maven" in n or "spring" in n:
+        return "Java + Spring Boot + Maven"
+    elif lang:
+        if lang.lower() == "java":
+            return "Java + OOP Foundations"
+        elif lang.lower() == "javascript":
+            return "JavaScript + Node.js"
+        return lang
+    return "Full Stack Tech"
 
 # ==================== MAIN COMPILATION ====================
 
@@ -422,7 +433,8 @@ def clean_old_svgs(svg_dir):
     obsolete_files = [
         "project-50-dashboard.svg",
         "workout-progress.svg",
-        "bike-progress.svg"
+        "bike-progress.svg",
+        "typing.svg" # Removed old typing in favor of boot-banner
     ]
     for f in obsolete_files:
         path = os.path.join(svg_dir, f)
@@ -433,7 +445,6 @@ def clean_old_svgs(svg_dir):
     # Clean project cards directory if it exists, recreate it
     cards_dir = os.path.join(svg_dir, "project-cards")
     if os.path.exists(cards_dir):
-        # We can delete all files inside but keep the folder
         for item in os.listdir(cards_dir):
             item_path = os.path.join(cards_dir, item)
             if os.path.isfile(item_path):
@@ -456,21 +467,14 @@ def main():
     svg_dir = os.path.join(script_dir, "..", "svg")
     os.makedirs(svg_dir, exist_ok=True)
     
-    # 1. Clean obsolete SVGs
     clean_old_svgs(svg_dir)
     
-    print("Generating minimalist adaptive dashboards...")
+    print("Generating Developer OS dashboards...")
     
-    # 2. Generate typing.svg
-    with open(os.path.join(svg_dir, "typing.svg"), "w", encoding="utf-8") as f:
-        f.write(TYPING_TEMPLATE)
-    print("Created typing.svg")
-        
-    # 3. Generate leetcode-dashboard.svg
+    # 1. Generate leetcode-dashboard.svg
     lc = stats["leetcode"]
     lc_svg = LEETCODE_TEMPLATE
     
-    # Max difficulty counts from LeetCode questions (mock or actual metadata, let's use approx counts)
     lc_svg = lc_svg.replace("{{all}}", str(lc["all"]))
     lc_svg = lc_svg.replace("{{easy}}", f"{lc['easy']} / 952")
     lc_svg = lc_svg.replace("{{easy_w}}", str(int((lc["easy"] / 952) * 180)))
@@ -481,7 +485,6 @@ def main():
     lc_svg = lc_svg.replace("{{hard}}", f"{lc['hard']} / 950")
     lc_svg = lc_svg.replace("{{hard_w}}", str(int((lc["hard"] / 950) * 180)))
     
-    # Contest rating block
     rating = lc.get("contest_rating", 0)
     if rating > 0:
         contest_block = f"""<rect class="stat-box" width="215" height="60" />
@@ -498,13 +501,11 @@ def main():
       
     lc_svg = lc_svg.replace("{{contest_block}}", contest_block)
     
-    # Badges rendering
     badges_str = ""
     badges = lc.get("badges", [])
     for idx, b in enumerate(badges[:4]):
         bx = 15 + idx * 45
         by = 24
-        # We render a small image embed for the badge icon
         badges_str += f'<image href="{b["icon"]}" x="{bx}" y="{by}" width="24" height="24" />\n      '
     if not badges:
         badges_str = '<text class="subtitle" x="15" y="34" font-size="11" fill="var(--text-muted)">No badges unlocked yet</text>'
@@ -514,43 +515,30 @@ def main():
     with open(os.path.join(svg_dir, "leetcode-dashboard.svg"), "w", encoding="utf-8") as f:
         f.write(lc_svg)
     print("Created leetcode-dashboard.svg")
+    
+    # 2. Generate command-center.svg
+    with open(os.path.join(svg_dir, "command-center.svg"), "w", encoding="utf-8") as f:
+        f.write(COMMAND_CENTER_TEMPLATE)
+    print("Created command-center.svg")
         
-    # 4. Generate dynamic project cards
+    # 3. Generate dynamic project cards
     repos = stats.get("repos", [])
-    # Filter out profile readme repo named shafiq-11
     filtered_repos = [r for r in repos if r["name"].lower() != "shafiq-11"]
     if not filtered_repos:
         filtered_repos = repos
         
     cards_dir = os.path.join(svg_dir, "project-cards")
-    
     featured_project_svgs = []
     
     for repo in filtered_repos[:5]: # Take top 5
         name = repo["name"]
-        desc = repo["description"]
         lang = repo["language"]
-        stars = repo["stars"]
-        forks = repo["forks"]
         
-        desc1, desc2 = split_description(desc, 50)
+        tech_stack = get_tech_stack_string(name, lang)
         
         card_content = PROJECT_CARD_TEMPLATE
         card_content = card_content.replace("{{name}}", name)
-        card_content = card_content.replace("{{desc1}}", desc1)
-        card_content = card_content.replace("{{desc2}}", desc2)
-        card_content = card_content.replace("{{language}}", lang)
-        card_content = card_content.replace("{{lang_color}}", get_lang_color(lang))
-        card_content = card_content.replace("{{stars}}", str(stars))
-        card_content = card_content.replace("{{forks}}", str(forks))
-        
-        # Meta spacings
-        lang_len = len(lang)
-        stars_x = 20 + max(lang_len * 7, 50)
-        forks_x = stars_x + 20 + max(len(str(stars)) * 7, 25)
-        
-        card_content = card_content.replace("{{stars_x}}", str(stars_x))
-        card_content = card_content.replace("{{forks_x}}", str(forks_x))
+        card_content = card_content.replace("{{tech_stack}}", tech_stack)
         
         filename = f"{name}.svg"
         card_path = os.path.join(cards_dir, filename)
@@ -570,7 +558,7 @@ def main():
         f.write(LOADING_CARD_TEMPLATE)
     print("Created project card placeholder: more-projects.svg")
     
-    # 5. Update README.md with the generated project cards
+    # 4. Update README.md with the generated project cards
     update_readme_projects(featured_project_svgs)
 
 def update_readme_projects(projects):
@@ -587,7 +575,6 @@ def update_readme_projects(projects):
         
     # Format project cards in a clean 2x3 or 2x2 layout
     table_rows = ""
-    # We will build rows of 2 columns
     for i in range(0, len(projects), 2):
         col1 = projects[i]
         col2 = projects[i+1] if i+1 < len(projects) else None
@@ -605,7 +592,6 @@ def update_readme_projects(projects):
       </a>
     </td>"""
         else:
-            # Render the more-projects.svg placeholder
             cell2 = f"""    <td width="50%" valign="top">
       <img src="svg/project-cards/more-projects.svg" alt="More Projects" width="100%"/>
     </td>"""
@@ -615,7 +601,6 @@ def update_readme_projects(projects):
 {cell2}
   </tr>\n"""
 
-    # If the total number of projects is even, we append the placeholder row at the end
     if len(projects) % 2 == 0:
         table_rows += """  <tr>
     <td width="50%" valign="top">
@@ -632,7 +617,6 @@ def update_readme_projects(projects):
 </table>
 <!-- PROJECTS_END -->"""
 
-    # Replace PROJECTS block in README.md
     pattern = r"<!-- PROJECTS_START -->.*?<!-- PROJECTS_END -->"
     if re.search(pattern, content, re.DOTALL):
         updated_content = re.sub(pattern, projects_replacement, content, flags=re.DOTALL)

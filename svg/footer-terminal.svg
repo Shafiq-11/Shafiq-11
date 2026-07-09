@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --border: #30363d;
+      --accent: #818cf8;
+      --text-main: #f0f6fc;
+      --text-dim: #6e7681;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fa;
+        --border: #d1d5db;
+        --accent: #4f46e5;
+        --text-main: #1f2937;
+        --text-dim: #6b7280;
+      }
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+    .screen {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+      rx: 8;
+    }
+    text {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      fill: var(--text-main);
+    }
+    .prompt {
+      fill: var(--accent);
+      font-weight: bold;
+    }
+    .dim {
+      fill: var(--text-dim);
+    }
+    .cursor {
+      fill: var(--accent);
+      animation: blink 0.8s infinite steps(2);
+    }
+    .terminal-line {
+      opacity: 0;
+    }
+    
+    .l-1 { animation: show 0s 0.2s forwards; }
+    .l-2 { animation: show 0s 1.0s forwards; }
+    .l-3 { animation: show 0s 1.8s forwards; }
+    .l-4 { animation: show 0s 2.6s forwards; }
+    .l-5 { animation: show 0s 3.4s forwards; }
+    .l-6 { animation: show 0s 4.2s forwards; }
+    .l-7 { animation: show 0s 5.0s forwards; }
+    .l-8 { animation: show 0s 5.8s forwards; }
+    .l-9 { animation: show 0s 6.6s forwards; }
+    
+    @keyframes show {
+      to { opacity: 1; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+  
+  <rect class="screen" width="798" height="198" x="1" y="1" />
+  
+  <g transform="translate(30, 35)">
+    <!-- command 1 -->
+    <g class="terminal-line l-1">
+      <text x="0" y="0"><tspan class="prompt">shafiq@os:~$</tspan> whoami</text>
+    </g>
+    <g class="terminal-line l-2">
+      <text x="0" y="18" class="dim">Shafiq Ahamed</text>
+    </g>
+    
+    <!-- command 2 -->
+    <g class="terminal-line l-3" transform="translate(0, 36)">
+      <text x="0" y="0"><tspan class="prompt">shafiq@os:~$</tspan> skills</text>
+    </g>
+    <g class="terminal-line l-4" transform="translate(0, 36)">
+      <text x="0" y="18" class="dim">Java | Spring Boot | React | MySQL</text>
+    </g>
+    
+    <!-- command 3 -->
+    <g class="terminal-line l-5" transform="translate(0, 72)">
+      <text x="0" y="0"><tspan class="prompt">shafiq@os:~$</tspan> current</text>
+    </g>
+    <g class="terminal-line l-6" transform="translate(0, 72)">
+      <text x="0" y="18" class="dim">Building SportCircle App</text>
+    </g>
+    
+    <!-- command 4 -->
+    <g class="terminal-line l-7" transform="translate(0, 108)">
+      <text x="0" y="0"><tspan class="prompt">shafiq@os:~$</tspan> status</text>
+    </g>
+    <g class="terminal-line l-8" transform="translate(0, 108)">
+      <text x="0" y="18" class="dim">Open for Internship Opportunities 🚀</text>
+    </g>
+    
+    <!-- command line prompt with cursor -->
+    <g class="terminal-line l-9" transform="translate(0, 144)">
+      <text x="0" y="0"><tspan class="prompt">shafiq@os:~$</tspan></text>
+      <rect class="cursor" x="110" y="-12" width="8" height="14" />
+    </g>
+  </g>
+</svg>
