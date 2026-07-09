@@ -3,8 +3,7 @@
 <!-- Animated wave header banner (capsule-render, fully animated gradient) -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00f0ff,50:bd00ff,100:00f0ff&height=180&section=header&text=SHAFIQ.EXE&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20System%20Online&descAlignY=58&descSize=18" width="100%"/>
 
-<!-- Original cyberpunk hero banner -->
-<img src="assets/banner.png" alt="Shafiq Cyberpunk Dashboard Banner" width="100%" style="border-radius: 12px; border: 2px solid #bd00ff; box-shadow: 0 0 20px #00f0ff;"/>
+
 
 <!-- Boot Screen -->
 <img src="svg/boot-banner.svg" alt="Booting Developer OS..." width="800"/>
